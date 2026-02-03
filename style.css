@@ -1,0 +1,103 @@
+body {
+    margin: 0;
+    height: 100vh;
+    background-color: #ffb6c1;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.page {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+}
+
+.page.active {
+    display: flex;
+}
+
+h1 {
+    font-size: 3rem;
+    color: #b30059;
+    margin: 10px 0;
+}
+
+h2 {
+    font-size: 2rem;
+    color: #b30059;
+    margin: 10px 0;
+}
+
+.main-img {
+    width: 260px;
+    border-radius: 20px;
+    margin: 20px 0;
+}
+
+/* Első oldal gombok */
+.buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+button {
+    font-size: 1.5rem;
+    padding: 15px 40px;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    min-width: 150px;
+    min-height: 50px;
+}
+
+#yesBtn {
+    background-color: #ff4d88;
+    color: white;
+    position: relative;
+}
+
+/* NEM gomb a teljes képernyőn */
+#noBtn {
+    background-color: #ddd;
+    color: black;
+    position: absolute;  /* body-hoz képest */
+    top: calc(50% + 60px);
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+}
+
+/* Második oldal */
+.second-page .main-img {
+    margin-bottom: 20px;
+}
+
+.second-page button {
+    min-width: 150px;
+}
+
+/* Harmadik oldal */
+.final-page .main-img {
+    width: 300px;
+}
+
+/* Mobil */
+@media(max-width:500px){
+    h1 { font-size:2rem; }
+    h2 { font-size:1.5rem; }
+    .main-img { width:180px; }
+    button { font-size:1.2rem; padding:10px 20px; }
+}
+
+
